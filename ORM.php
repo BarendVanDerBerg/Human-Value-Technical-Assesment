@@ -31,7 +31,7 @@ class ORM {
 		}		
 
 		//SQL statement to use on the server
-		$sql = "INSERT INTO humanTable(Firstname,Surname,Username,Password,Email,CellNum) VALUES ('$firstname','$surname','$username','$password','$email','$cellnum');";
+		$sql = "INSERT INTO humantable(Firstname,Surname,Username,Password,Email,CellNum) VALUES ('$firstname','$surname','$username','$password','$email','$cellnum');";
 
 		//executes the SQL statement, if the record was addes succesfully without network or syntax errors it will print 'Record Added'
 		if (mysqli_query($conn, $sql)) {
@@ -61,7 +61,7 @@ class ORM {
 		}	
 
 		//SQL statement to use on the server
-		$sql = "SELECT * FROM humanTable;";
+		$sql = "SELECT * FROM humantable;";
 
 		//submits the query to the server and saves to variable $results
 		$results = mysqli_query($conn, $sql);
@@ -98,7 +98,7 @@ class ORM {
 		}	
 
 		//SQL statement to use on the server
-		$sql = "UPDATE humanTable SET Password = '$password', Firstname = '$firstname', Surname = '$surname', CellNum = $cellnum WHERE Email = '$email' OR Username = '$username';";
+		$sql = "UPDATE humantable SET Password = '$password', Firstname = '$firstname', Surname = '$surname', CellNum = $cellnum WHERE Email = '$email' OR Username = '$username';";
 
 		//checks if the query was succesful
 		if (mysqli_query($conn, $sql)) {
@@ -129,7 +129,7 @@ class ORM {
 		}	
 
 		//SQL statement to use on the server
-		$sql = "DELETE FROM humanTable WHERE Email = '$email';";
+		$sql = "DELETE FROM humantable WHERE Email = '$email';";
 
 		//checks if the query was succesful
 		if (mysqli_query($conn, $sql)) {
